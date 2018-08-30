@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -89,7 +87,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Método para reiniciar as listas e variáveis (reiniciar o programa)
-    protected boolean limpaContexto() {
+    @SuppressWarnings("UnusedReturnValue")
+    private boolean limpaContexto() {
 
         try {
             numerosDisponiveis = new ArrayList<>();
@@ -117,7 +116,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Método para restaurar o contexto
-    protected boolean restauraContexto(Bundle savedInstanceState) {
+    @SuppressWarnings("UnusedReturnValue")
+    private boolean restauraContexto(Bundle savedInstanceState) {
         try {
             if (savedInstanceState != null) {
                 numerosSorteados = savedInstanceState.getIntegerArrayList("SORTEADOS");
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Verifica se os controles devem ser exibidos ou ocultados
-    public void exibeOcultaControles()
+    private void exibeOcultaControles()
     {
         if (ultimoNumero > 0) {
             // Recupera a cor da bola que deve ser exibida com base no número sorteado
