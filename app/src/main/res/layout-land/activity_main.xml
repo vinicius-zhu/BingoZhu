@@ -48,7 +48,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="buttonLimpar"
-        android:text="Limpar"
+        android:text="@string/limpar"
         app:layout_constraintEnd_toEndOf="@+id/textViewLabelPressione"
         app:layout_constraintStart_toEndOf="@+id/verticalGuideline"
         app:layout_constraintTop_toBottomOf="@+id/textViewLabelPressione" />
